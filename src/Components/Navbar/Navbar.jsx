@@ -17,6 +17,13 @@ const Navbar = () => {
       <li>
         <Link to={"/contact"}>Contact</Link>
       </li>
+      {user && (
+        <>
+          <li>
+            <Link to={"/dashboard"}>Dashboard</Link>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -55,7 +62,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-5">
             <div className=" hidden lg:flex">
-              <ul className="flex gap-8 items-center ">{navLinks}</ul>
+              <ul className="flex gap-7 items-center ">{navLinks}</ul>
             </div>
             {user ? (
               <div className="dropdown dropdown-end">

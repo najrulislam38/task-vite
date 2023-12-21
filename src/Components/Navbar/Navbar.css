@@ -1,5 +1,6 @@
 ul > li > a {
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 ul > li > a:hover {
