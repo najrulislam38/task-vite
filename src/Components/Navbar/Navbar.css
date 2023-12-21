@@ -1,0 +1,8 @@
+ul > li > a {
+  font-weight: 600;
+}
+
+ul > li > a:hover {
+  color: #00b8d6;
+  transition: 0.3s;
+}
