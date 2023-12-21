@@ -12,7 +12,9 @@ const Banner = () => {
       <div className="hero-overlay  bg-opacity-50"></div>
       <div className="hero-content text-center text-white">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Manage Your Task</h1>
+          <h1 className="mb-5 text-5xl font-bold font-poppins">
+            Manage Your Task
+          </h1>
           <p className="mb-5">
             Optimize your time management with built-in timers, reports, and
             insights to enhance your overall efficiency.
