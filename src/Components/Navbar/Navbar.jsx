@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
 import NavLogo from "../NavLogo/NaLogo";
+import userProfile from "../../assets/User-Profile.png";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const user = true;
+  const user = false;
 
   const navLinks = (
     <>
@@ -30,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="border-b shadow-sm">
       <Container>
-        <div className="flex justify-between items-center py-2 ">
+        <div className="flex justify-between items-center py-3 ">
           <div className="">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,10 +69,10 @@ const Navbar = () => {
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    {user ? (
+                    {user?.photoURL ? (
                       <img src={"photoURL"} alt="user image" />
                     ) : (
-                      <img src="/assets/user.png" />
+                      <img src={userProfile} />
                     )}
                   </div>
                 </label>
@@ -93,7 +94,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={""}
-                      className="btn btn-sm  btn-ghost bg-[#FF444A]  "
+                      className="btn btn-sm  btn-accent bg-[#00b8d6]  "
                     >
                       Logout
                     </button>
@@ -102,7 +103,7 @@ const Navbar = () => {
               </div>
             ) : (
               <Link to={"/login"}>
-                <button className=" py-2 px-5 bg-[#FF444A] font-poppins font-medium rounded-md text-white">
+                <button className="btn btn-sm btn-accent py-2 px-5  font-poppins font-medium text-white">
                   Login
                 </button>
               </Link>
